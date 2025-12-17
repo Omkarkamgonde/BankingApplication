@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.sql.*"%>
+    pageEncoding="UTF-8" import="java.sql.*, com.example.util.DBConnection"%>
 <!DOCTYPE html>
 <html>
 
 <body>
 <%
 try{
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ankush?autoReconnect=true&useSSL=false","root","Deshmukhadcet@123");
+	Connection con=DBConnection.getConnection();
 	
 	PreparedStatement stmt=con.prepareStatement("insert into admininfo values(?,?,?,?,?)");
 	stmt.setString(1,request.getParameter("t1"));

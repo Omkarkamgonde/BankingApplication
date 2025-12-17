@@ -1,0 +1,12 @@
+target/
+build/
+.classpath
+.settings/
+.idea/
+*.class
+*.log
+*.tmp
+*.swp
+~*
+node_modules/
+
